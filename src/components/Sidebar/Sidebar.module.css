@@ -1,0 +1,59 @@
+.sidebar {
+  height: 100vh;
+  width: clamp(200px, 20vw, 400px);
+  z-index: 1;
+  background-color: var(--surface-200);
+  color: var(--color-text-100);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.sidebar ul li:hover {
+  background-color: var(--primary-1);
+}
+
+.sidebar ul > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--color-text-100);
+  cursor: pointer;
+}
+
+.sidebar.shrink {
+  width: 4rem;
+}
+
+.shrink .header {
+  padding: 0rem;
+}
+
+.shrink .header button {
+  border-radius: 0 2rem 2rem 0;
+  width: 100%;
+  height: 56px;
+}

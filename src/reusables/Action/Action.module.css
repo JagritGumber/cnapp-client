@@ -1,0 +1,14 @@
+.action {
+  background-color: var(--surface-100);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action:hover {
+  background-color: var(--primary-2);
+  color: var(--surface-100);
+}

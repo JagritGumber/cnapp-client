@@ -1,0 +1,22 @@
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.breadcrumb > li:nth-child(odd) {
+  cursor: pointer;
+  text-transform: capitalize;
+  color: var(--text-200);
+}
+
+.breadcrumb > li:nth-child(even) {
+  cursor: default;
+}
+
+.breadcrumb > li:last-child {
+  color: var(--text-100);
+  font-weight: 500;
+}

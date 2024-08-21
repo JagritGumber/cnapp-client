@@ -1,0 +1,34 @@
+.accordion {
+  height: auto;
+}
+
+.accordion .topRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.topRow h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.accordion .topRow:hover {
+  background-color: var(--color-surface-400);
+}
+
+.bottomSheet {
+  will-change: opacity, transform;
+}
+
+.item {
+  padding: 0.2rem 2rem;
+  cursor: pointer;
+  color: var(--color-text-200);
+}
+
+.item:hover {
+  color: var(--color-text-100);
+}

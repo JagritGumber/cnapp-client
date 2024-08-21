@@ -1,0 +1,22 @@
+.dashboard {
+  background-color: var(--surface-200);
+  color: var(--text-100);
+  border-top-left-radius: 1rem;
+  padding: 0 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.spacer {
+  margin-left: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: center;
+}

@@ -1,17 +1,26 @@
-import { Navbar } from "@/components";
-import "./Dashboard.css";
+import { Action } from "@/reusables";
+import styles from "./Dashboard.module.css";
+import { FaBox } from "react-icons/fa";
 
-const Dashboard = () => {
-  // TODO: Implement the dashboard component
+const Dashboard: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <div className="dashboard">
-        <h1>Welcome to your dashboard</h1>
-        <p>
-          Here you can find all the information about your posts, comments,
-          users and more.
-        </p>
+      <div className={styles.dashboard}>
+        <div className={styles.header}>
+          <div>
+            <h1>Performance summary for this week</h1>
+            <p>
+              You can add more widgets and organize existing widgets from over
+              there
+              {" ->"}
+            </p>
+          </div>
+          <div className={styles.spacer} />
+          <Action onClick={() => {}}>
+            <FaBox size={12} />
+            Manage Widgets
+          </Action>
+        </div>
       </div>
     </>
   );
