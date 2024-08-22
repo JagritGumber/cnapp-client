@@ -1,0 +1,21 @@
+.bigCard {
+  aspect-ratio: 7/5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.interactable {
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bigCard:has(.interactable:hover) {
+  background-color: var(--mixed-200);
+}

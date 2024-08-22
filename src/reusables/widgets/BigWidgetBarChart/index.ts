@@ -1,0 +1,1 @@
+export { BigWidgetBarChart } from "./BigWidgetBarChart";
