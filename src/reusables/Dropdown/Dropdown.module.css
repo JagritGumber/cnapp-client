@@ -1,0 +1,54 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--surface-100);
+  padding-left: 1rem;
+  border-radius: 1rem;
+}
+
+.dropdownTrigger {
+  background-color: var(--surface-100);
+  font-size: 1.2rem;
+  font-size: 1rem;
+  width: 7rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.dropdownTrigger:hover {
+  background-color: var(--primary-2);
+  color: var(--surface-100);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  background-color: var(--surface-100);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dropdownItem {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.dropdownItem.selected {
+  background-color: var(--mixed-200);
+}
+
+.dropdownItem:hover {
+  background-color: var(--primary-1);
+  color: var(--surface-100);
+  cursor: pointer;
+}
