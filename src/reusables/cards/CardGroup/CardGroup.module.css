@@ -1,0 +1,16 @@
+.cardGroup {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+}
+
+.cardGroupHeader {
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--text-100);
+}
+
+.cardGroupHeader span {
+  font-weight: 400;
+  color: var(--text-200);
+}

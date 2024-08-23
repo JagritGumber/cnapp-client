@@ -1,0 +1,7 @@
+.card {
+  flex-basis: calc(100% / var(--columns) - 0.8rem);
+  background-color: var(--surface-100);
+  border: 1px solid var(--surface-300);
+  border-radius: 1rem;
+  padding: 1rem;
+}
