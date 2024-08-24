@@ -1,6 +1,6 @@
 # CNAPP CLIENT DEMO - For submission
 
-The project has been hosted on github pages and can be tested from here [Open Project](https://jagritgumber.github.io/cnapp-client/)
+The project has been hosted on vercel and can be tested from here [Open Project](https://cnapp-client.vercel.app/)
 The project can also be tested by cloning this branch locally and following the steps given below
 
 ## Steps to run the project locally
