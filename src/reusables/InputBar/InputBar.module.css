@@ -1,79 +1,38 @@
-.form {
-  --timing: 0.3s;
-  --width-of-input: 300px;
-  --height-of-input: 40px;
-  --border-height: 2px;
-  --input-bg: var(--surface-100);
-  --border-color: var(--primary-2);
-  --border-radius: 30px;
-  --after-border-radius: 1px;
-  --text-color: var(--text-100);
-  position: relative;
-  width: var(--width-of-input);
-  height: var(--height-of-input);
-  display: flex;
-  align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
-  background: var(--input-bg, #d9d9d9);
-}
-
-.form > button {
-  border: none;
-  background: none;
-  color: #8b8ba7;
-  /* Needed to center the icons */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .input {
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.3rem;
   font-size: 0.9rem;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  padding-inline: 0.5em;
-  padding-block: 0.7em;
-  border: none;
-  color: var(--text-color);
-}
-/* styling of animated border */
-.form::before {
-  content: "";
-  position: absolute;
-  background: var(--border-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  width: 100%;
-  height: var(--border-height);
-  left: 0;
-  bottom: 0;
-  border-radius: 1px;
-  transition: transform var(--timing) ease;
-}
-/* Hover on Input */
-.form:focus-within {
-  border-radius: var(--after-border-radius);
+  font-weight: bold;
+  color: #05060f99;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
 }
 
-.input:focus {
+.input:hover,
+.input:focus,
+.inputGroup:hover .input {
   outline: none;
+  border-color: #05060f;
 }
 
-.form:focus-within:before {
-  transform: scale(1);
+.inputGroup:hover .label,
+.input:focus {
+  color: #05060fc2;
 }
 
-.reset {
-  border: none;
-  background: none;
-  opacity: 0;
-  visibility: hidden;
-}
-/* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
-  opacity: 1;
-  visibility: visible;
+.inputGroup,
+.input,
+.label {
+  width: 100%;
 }

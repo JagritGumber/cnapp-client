@@ -1,15 +1,19 @@
 import { IUseCase, ServerError } from "@/types";
 import { User } from "../entities";
 import { IAuthRepository } from "../repositories";
+import { inject, injectable } from "inversify";
+import { container } from "@/inversify.config";
 
 interface LoginUserUseCaseParams {
   email: string;
   password: string;
 }
 
+@injectable()
 class LoginUserUseCase implements IUseCase<User, LoginUserUseCaseParams> {
-  private authRepository: IAuthRepository;
-  constructor(authRepository: IAuthRepository) {
+  constructor(
+    @inject("IAuthRepository") private authRepository: IAuthRepository
+  ) {
     this.authRepository = authRepository;
   }
 
@@ -25,14 +29,11 @@ class LoginUserUseCase implements IUseCase<User, LoginUserUseCaseParams> {
   }
 }
 
-function loginUserUseCase({
-  email,
-  password,
-  authRepository,
-}: LoginUserUseCaseParams & {
-  authRepository: IAuthRepository;
-}) {
-  return new LoginUserUseCase(authRepository).execute({ email, password });
+function loginUserUseCase({ email, password }: LoginUserUseCaseParams) {
+  return new LoginUserUseCase(container.get("IAuthRepository")).execute({
+    email,
+    password,
+  });
 }
 
-export { loginUserUseCase, type LoginUserUseCaseParams };
+export { loginUserUseCase, LoginUserUseCase, type LoginUserUseCaseParams };

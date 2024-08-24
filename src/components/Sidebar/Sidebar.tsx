@@ -2,8 +2,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import styles from "./Sidebar.module.css";
 import { MotionConfig } from "framer-motion";
 import { IconButton } from "@/reusables";
-import { MdOutlineDashboard } from "react-icons/md";
-import { FaChartLine, FaPencil, FaGear } from "react-icons/fa6";
+import { FaGear, FaHouse } from "react-icons/fa6";
 import { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
@@ -18,19 +17,9 @@ const Sidebar: React.FC = () => {
 
   const sidebarNavigations = [
     {
-      name: "Dashboard",
-      icon: <MdOutlineDashboard size={24} />,
-      link: "/app/dashboard",
-    },
-    {
-      name: "All Analytics",
-      icon: <FaChartLine size={24} />,
-      link: "/app/all-analytics",
-    },
-    {
-      name: "Edit Data",
-      icon: <FaPencil size={24} />,
-      link: "/app/edit-data",
+      name: "Home",
+      icon: <FaHouse size={24} />,
+      link: "/app",
     },
     {
       name: "Settings",
@@ -40,13 +29,20 @@ const Sidebar: React.FC = () => {
   ];
 
   const updateQuery = (isShrink: boolean) => {
+    const queryParams = new URLSearchParams(location.search);
+    queryParams.set("isShrink", String(isShrink));
     navigate({
-      search: `?isShrink=${isShrink}`,
+      search: `?${queryParams.toString()}`,
     });
   };
 
   const getNavLink = (link: string) => {
     const queryParams = new URLSearchParams(location.search);
+    if (link === "/app") {
+      // we need to remove the param projectId
+      queryParams.delete("projectId");
+      queryParams.delete("categoryId");
+    }
     const url = `${link}?${queryParams.toString()}`;
     return url;
   };

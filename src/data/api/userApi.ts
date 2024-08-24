@@ -6,6 +6,7 @@
 import { User } from "@/domain/entities";
 import users from "../mock/users.json";
 import { ServerError } from "@/types";
+import { injectable } from "inversify";
 
 interface IUserLocalApi {
   getUserByEmailandPassword: (
@@ -14,13 +15,14 @@ interface IUserLocalApi {
   ) => Promise<User | ServerError>;
 }
 
+@injectable()
 class UserLocalApi implements IUserLocalApi {
   private users: User[];
   constructor() {
-    this.users = UserLocalApi.loadUsers();
+    this.users = this.loadUsers();
   }
 
-  static loadUsers = () => {
+  private loadUsers = () => {
     const userData = users;
     return userData;
   };
@@ -34,9 +36,11 @@ class UserLocalApi implements IUserLocalApi {
     )[0];
 
     if (user == undefined) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       return { message: "User not found", status: 404 } as ServerError;
     }
 
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return user as User;
   };
 }

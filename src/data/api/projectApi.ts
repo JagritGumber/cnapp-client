@@ -3,24 +3,27 @@
 // From a remote Datasource, This is the implementation of retrieving
 // data from our local datasource that can't be dynamically changed as of now
 
+// It has delays to simulate requests from the server
+
 import { Project } from "@/domain/entities";
 import projects from "../mock/projects.json";
 import { ServerError } from "@/types";
+import { injectable } from "inversify";
 
 interface IProjectLocalApi {
   getUserProjects: (userId: string) => Promise<Project[] | ServerError>;
   getProjectById: (id: string) => Promise<Project | ServerError>;
 }
 
+@injectable()
 class ProjectLocalApi implements IProjectLocalApi {
   private projects: Project[];
   constructor() {
-    this.projects = ProjectLocalApi.loadProjects();
+    this.projects = this.loadProjects();
   }
 
-  static loadProjects = () => {
-    const projectData = projects;
-    return projectData;
+  private loadProjects = () => {
+    return projects as Project[];
   };
 
   getUserProjects = async (
@@ -31,9 +34,10 @@ class ProjectLocalApi implements IProjectLocalApi {
     );
 
     if (projects == undefined || projects.length === 0) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       return { message: "No project found", status: 404 } as ServerError;
     }
-
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return projects;
   };
 
@@ -41,9 +45,11 @@ class ProjectLocalApi implements IProjectLocalApi {
     const project = this.projects.filter((project) => project.id === id)[0];
 
     if (project == undefined) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       return { message: "Project not found", status: 404 } as ServerError;
     }
 
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return project;
   };
 }

@@ -1,17 +1,20 @@
 import { IUseCase, ServerError } from "@/types";
 import { Project } from "../entities";
 import { IProjectRepository } from "../repositories";
+import { container } from "@/inversify.config";
+import { inject, injectable } from "inversify";
 
 interface GetAllUserProjectsUseCaseParams {
   userId: string;
 }
 
+@injectable()
 class GetAllUserProjectsUseCase
   implements IUseCase<Project[], GetAllUserProjectsUseCaseParams>
 {
-  private projectRepository: IProjectRepository;
-
-  constructor(projectRepository: IProjectRepository) {
+  constructor(
+    @inject("IProjectRepository") private projectRepository: IProjectRepository
+  ) {
     this.projectRepository = projectRepository;
   }
 
@@ -25,11 +28,14 @@ class GetAllUserProjectsUseCase
 
 const getAllUserProjectsUseCase = ({
   userId,
-  projectRepository,
-}: GetAllUserProjectsUseCaseParams & {
-  projectRepository: IProjectRepository;
-}) => {
-  return new GetAllUserProjectsUseCase(projectRepository).execute({ userId });
+}: GetAllUserProjectsUseCaseParams) => {
+  return new GetAllUserProjectsUseCase(
+    container.get("IProjectRepository")
+  ).execute({ userId });
 };
 
-export { getAllUserProjectsUseCase, type GetAllUserProjectsUseCaseParams };
+export {
+  getAllUserProjectsUseCase,
+  GetAllUserProjectsUseCase,
+  type GetAllUserProjectsUseCaseParams,
+};

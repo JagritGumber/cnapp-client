@@ -13,4 +13,5 @@
 .cardGroupHeader span {
   font-weight: 400;
   color: var(--text-200);
+  font-size: 1.2rem;
 }

@@ -12,12 +12,17 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "framer-motion": "^11.3.29",
+    "inversify": "^6.0.2",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-redux": "^9.1.2",
     "react-router-dom": "^6.26.1",
     "recharts": "^2.12.7",
+    "redux-persist": "^6.0.0",
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^10.0.0",
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
@@ -25,6 +30,8 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "@types/inversify": "^2.0.33",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",

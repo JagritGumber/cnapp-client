@@ -1,0 +1,111 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  left: 0;
+  top: -100%;
+  z-index: 30;
+  transition: top 100ms ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: var(--surface-200);
+  color: var(--color-text-100);
+  width: 500px;
+  min-height: 500px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 1rem;
+  z-index: 40;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transition: top 100ms ease-in;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+.form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-100);
+}
+
+.open {
+  top: 0;
+}
+
+.form.open {
+  top: 50%;
+  display: flex;
+  gap: 1rem;
+  flex-flow: column;
+}
+
+.form h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dataChange {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.dataChange button:first-of-type {
+  margin-left: auto;
+}
+
+.dataRowList {
+  list-style: none;
+  display: block;
+}
+
+.dataEdit {
+  display: flex;
+}
+
+.dataRow {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.dataColumns {
+  flex-grow: 50%;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.dataColumns input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.buttons {
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 1rem 2rem;
+  background-color: var(--surface-100);
+  width: 100%;
+  font-size: 1rem;
+}
+
+.buttons button:hover {
+  background-color: var(--support-1);
+  color: var(--surface-100);
+}
+
+.buttons button:last-child:hover {
+  background-color: var(--support-3);
+  color: var(--surface-100);
+}

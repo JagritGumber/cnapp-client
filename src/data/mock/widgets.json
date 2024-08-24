@@ -1,0 +1,119 @@
+[
+  {
+    "id": "widget-1",
+    "name": "Cloud Security Risks",
+    "categoryId": "category-1",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Risk 1", "v1": 30 },
+      { "label": "Risk 2", "v1": 40 }
+    ],
+    "type": "pie",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-2",
+    "name": "Vulnerability Scan",
+    "categoryId": "category-1",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Scan 1", "v1": 50, "v2": 60 },
+      { "label": "Scan 2", "v1": 70, "v2": 80 }
+    ],
+    "type": "bar",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-3",
+    "name": "Cloud Accounts",
+    "categoryId": "category-2",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Account 1", "v1": 10, "v2": 20, "v3": 30 },
+      { "label": "Account 2", "v1": 40, "v2": 50, "v3": 60 }
+    ],
+    "type": "pie",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-4",
+    "name": "Vulnerability Remediation",
+    "categoryId": "category-2",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Remediation 1", "v1": 70 },
+      { "label": "Remediation 2", "v1": 80 }
+    ],
+    "type": "line",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-5",
+    "name": "Vulnerability Scan",
+    "categoryId": "category-3",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Scan 1", "v1": 70, "v2": 80, "v3": 90 },
+      { "label": "Scan 2", "v1": 100, "v2": 110, "v3": 120 }
+    ],
+    "type": "line",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-6",
+    "name": "Vulnerability Remediation",
+    "categoryId": "category-3",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Remediation 1", "v1": 70, "v2": 80 },
+      { "label": "Remediation 2", "v1": 90, "v2": 100 }
+    ],
+    "type": "line",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-7",
+    "name": "Cloud Security Risks",
+    "categoryId": "category-4",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Risk 1", "v1": 30, "v2": 40, "v3": 50 },
+      { "label": "Risk 2", "v1": 60, "v2": 70, "v3": 80 }
+    ],
+    "type": "bar",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-8",
+    "name": "Cloud Accounts",
+    "categoryId": "category-4",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Account 1", "v1": 10 },
+      { "label": "Account 2", "v1": 30 }
+    ],
+    "type": "bar",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "widget-9",
+    "name": "Vulnerability Remediation",
+    "categoryId": "category-4",
+    "projectId": "project-1",
+    "data": [
+      { "label": "Remediation 1", "v1": 70, "v2": 80, "v3": 90 },
+      { "label": "Remediation 2", "v1": 100, "v2": 110, "v3": 120 }
+    ],
+    "type": "line",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  }
+]
