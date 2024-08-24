@@ -1,6 +1,6 @@
 # CNAPP CLIENT DEMO - For submission
 
-The project has been hosted on github pages and can be tested from here [Open Project]()
+The project has been hosted on github pages and can be tested from here [Open Project](https://jagritgumber.github.io/cnapp-client/)
 The project can also be tested by cloning this branch locally and following the steps given below
 
 ## Steps to run the project locally
@@ -27,3 +27,5 @@ bun run dev
 ```
 
 And you should be able to run the app locally.
+
+We recommend to run the app on a pc with resolution between 1280 x 720 and 1920 x 1080 recommended because app has not been optimized for all screen sizes
