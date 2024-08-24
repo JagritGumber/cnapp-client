@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# CNAPP CLIENT DEMO - For submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The project has been hosted on github pages and can be tested from here [Open Project]()
+The project can also be tested by cloning this branch locally and following the steps given below
 
-Currently, two official plugins are available:
+## Steps to run the project locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project used bun as it's package manager so we recommend that you download it if you haven't already. The instructions to download bunjs can be found at there website by following this [link](https://bun.sh/docs/installation)
 
-## Expanding the ESLint configuration
+Once bun installed clone this repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/JagritGumber/cnapp-client.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Once the repository is cloned go to the directory and isntall all dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd cnapp-client
+bun install
 ```
+
+Once The dependencies installed just run the below command and follow the url
+
+```bash
+bun run dev
+```
+
+And you should be able to run the app locally.

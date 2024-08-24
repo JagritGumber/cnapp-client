@@ -1,0 +1,29 @@
+.landing {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.landing img {
+  width: 50%;
+}
+
+.landing button {
+  margin-top: 4rem;
+  background-color: var(--primary-1);
+  color: var(--surface-100);
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.landing button:hover {
+  background-color: var(--support-2);
+  color: var(--surface-100);
+}

@@ -9,10 +9,9 @@ import {
 } from "@/features";
 import { WidgetCheckbox } from "../WidgetCheckbox";
 import { ConfirmPrompt } from "../ConfirmPrompt";
+import loading from "@/assets/loading.svg";
 
-interface ManagePanelProps {}
-
-const ManagePanel: React.FC<Readonly<ManagePanelProps>> = () => {
+const ManagePanel: React.FC = () => {
   const dispatch = useAppDispatch();
   const { categories } = useAppSelector((state) => state.category);
   const { widgets } = useAppSelector((state) => state.widget);
@@ -110,6 +109,12 @@ const ManagePanel: React.FC<Readonly<ManagePanelProps>> = () => {
                 );
               })}
         </ul>
+        {selectedCategory == undefined && (
+          <div className={styles.svg}>
+            <img src={loading} alt="loading" />
+            <h3>Nothing Over here</h3>
+          </div>
+        )}
       </aside>
     </>
   );
