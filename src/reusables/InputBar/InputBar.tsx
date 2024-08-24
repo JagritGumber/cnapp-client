@@ -1,34 +1,40 @@
 import styles from "./InputBar.module.css";
-import { IoSearchOutline, IoClose, IoCheckmark } from "react-icons/io5";
 
 interface InputBarProps {
-  fieldType: "input" | "search";
-  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
+  label?: string;
+  value: string;
+  name: string;
+  type: string;
+  placeholder?: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  required: boolean;
 }
 
 const InputBar: React.FC<Readonly<InputBarProps>> = ({
-  fieldType,
-  onSubmit,
+  label,
+  value,
+  name,
+  type,
+  placeholder,
+  onChange,
+  required,
 }) => {
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
-      <button type="submit">
-        {fieldType === "search" ? (
-          <IoSearchOutline size={16} />
-        ) : (
-          <IoCheckmark size={16} />
-        )}
-      </button>
+    <div className={styles.inputGroup}>
+      <label className={styles.label}>{label}</label>
       <input
-        type="text"
-        placeholder="Search"
+        autoComplete="off"
+        name={name}
+        id={name}
         className={styles.input}
-        name="input"
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        step="any"
+        required={required}
       />
-      <button className={styles.reset} type="reset">
-        <IoClose size={16} />
-      </button>
-    </form>
+    </div>
   );
 };
 

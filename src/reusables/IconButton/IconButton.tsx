@@ -28,7 +28,11 @@ const IconButton: React.FC<Readonly<IconButtonProps>> = ({
   }
 
   return (
-    <button className={styles.btn} onClick={onClick} style={{ width }}>
+    <button
+      className={styles.btn}
+      onClick={onClick}
+      style={{ minWidth: width }}
+    >
       {children}
     </button>
   );

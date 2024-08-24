@@ -14,8 +14,7 @@
   --support-2: #509bf4;
   --support-3: #e0b50f;
 
-  --primary-1: #f29f67;
-  --primary-2: #1e1e2c;
+  --primary-1: #1e1e2c;
 
   font-family: "Poppins", sans-serif;
   background-color: var(--surface-200);
@@ -40,4 +39,11 @@ button:active {
 
 html {
   overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  width: 100%;
 }

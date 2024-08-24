@@ -1,34 +1,16 @@
 import { BigCard } from "@/reusables/cards";
-import { Cell, Pie, PieChart, Tooltip, Legend, CartesianGrid } from "recharts";
+import { Data } from "@/types";
+import { Cell, Pie, PieChart, Tooltip } from "recharts";
 
-const BigWidgetPieChart: React.FC = () => {
-  const data01 = [
-    {
-      name: "Group A",
-      value: 400,
-    },
-    {
-      name: "Group B",
-      value: 300,
-    },
-    {
-      name: "Group C",
-      value: 300,
-    },
-    {
-      name: "Group D",
-      value: 200,
-    },
-    {
-      name: "Group E",
-      value: 278,
-    },
-    {
-      name: "Group F",
-      value: 189,
-    },
-  ];
+interface BigWidgetPieChartProps {
+  name: string;
+  data: Data[];
+}
 
+const BigWidgetPieChart: React.FC<Readonly<BigWidgetPieChartProps>> = ({
+  name,
+  data,
+}) => {
   const colors = [
     "#0088FE",
     "#00C49F",
@@ -40,30 +22,49 @@ const BigWidgetPieChart: React.FC = () => {
     "#FF8042",
   ];
   return (
-    <BigCard title="CSPM">
-      <PieChart width={400} height={250}>
+    <BigCard title={name}>
+      <PieChart width={350} height={220}>
         <Pie
-          data={data01}
-          dataKey="value"
-          nameKey="name"
+          data={data}
+          dataKey="v1"
+          nameKey="label"
           cx="50%"
           cy="50%"
-          innerRadius={70}
-          outerRadius={90}
+          innerRadius={60}
+          outerRadius={80}
           label
         >
-          {data01.map((_, index) => (
+          {data.map((_, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index]} />
+          ))}
+        </Pie>
+        <Pie
+          data={data}
+          dataKey="v2"
+          nameKey="label"
+          cx="50%"
+          cy="50%"
+          innerRadius={30}
+          outerRadius={50}
+        >
+          {data.map((_, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index]} />
+          ))}
+        </Pie>
+        <Pie
+          data={data}
+          dataKey="v3"
+          nameKey="label"
+          cx="50%"
+          cy="50%"
+          innerRadius={0}
+          outerRadius={20}
+        >
+          {data.map((_, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Pie>
         <Tooltip />
-        <Legend
-          verticalAlign="middle"
-          height={120}
-          layout="vertical"
-          align="right"
-          iconType="circle"
-        />
       </PieChart>
     </BigCard>
   );

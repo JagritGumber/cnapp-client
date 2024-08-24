@@ -1,0 +1,51 @@
+[
+  {
+    "id": "category-1",
+    "name": "Cloud Security",
+    "description": "Cloud security metrics",
+    "projectId": "project-1",
+    "widgets": [
+      { "widgetId": "widget-1", "render": true },
+      { "widgetId": "widget-2", "render": true }
+    ],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "category-2",
+    "name": "Vulnerability Management",
+    "description": "Vulnerability management metrics",
+    "projectId": "project-1",
+    "widgets": [
+      { "widgetId": "widget-3", "render": true },
+      { "widgetId": "widget-4", "render": true }
+    ],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "category-3",
+    "name": "Cloud Security",
+    "description": "Cloud security metrics",
+    "projectId": "project-1",
+    "widgets": [
+      { "widgetId": "widget-5", "render": true },
+      { "widgetId": "widget-6", "render": true }
+    ],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "category-4",
+    "name": "Vulnerability Management",
+    "description": "Vulnerability management metrics",
+    "projectId": "project-1",
+    "widgets": [
+      { "widgetId": "widget-7", "render": true },
+      { "widgetId": "widget-8", "render": true },
+      { "widgetId": "widget-9", "render": true }
+    ],
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z"
+  }
+]

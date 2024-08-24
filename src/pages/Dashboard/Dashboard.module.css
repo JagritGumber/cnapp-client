@@ -5,15 +5,15 @@
   padding: 0 1rem 1rem 1rem;
   overflow: hidden scroll;
   height: calc(100vh - 4rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   display: flex;
   align-items: flex-end;
-}
-
-.spacer {
-  margin-left: auto;
+  justify-content: space-between;
 }
 
 .actions {
@@ -21,4 +21,9 @@
   gap: 1rem;
   align-items: flex-end;
   justify-content: center;
+}
+
+.light {
+  color: var(--text-200);
+  font-weight: 400;
 }

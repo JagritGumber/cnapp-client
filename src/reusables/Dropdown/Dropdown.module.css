@@ -21,7 +21,7 @@
 
 .dropdownRow:hover,
 .dropdownTrigger:hover {
-  background-color: var(--primary-2);
+  background-color: var(--primary-1);
   color: var(--surface-100);
 }
 

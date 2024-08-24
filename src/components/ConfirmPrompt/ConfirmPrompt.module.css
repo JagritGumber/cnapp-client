@@ -1,0 +1,27 @@
+.prompt {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.confirmButton,
+.cancelButton {
+  flex-basis: 50%;
+  background-color: var(--surface-300);
+  color: var(--color-text-100);
+  width: 100%;
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.cancelButton:hover {
+  background-color: var(--primary-1);
+  color: var(--surface-100);
+}
+
+.confirmButton:hover {
+  background-color: var(--support-3);
+  color: var(--surface-100);
+}

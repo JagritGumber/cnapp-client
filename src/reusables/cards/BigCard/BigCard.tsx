@@ -1,6 +1,5 @@
-import IconButton from "@/reusables/IconButton/IconButton";
+
 import styles from "./BigCard.module.css";
-import { IoClose } from "react-icons/io5";
 
 interface BigCardProps {
   title?: string;
@@ -23,12 +22,15 @@ const BigCard: React.FC<Readonly<BigCardProps>> = ({
       {title && (
         <div className={styles.header}>
           {title}
-          <IconButton size="sm">
-            <IoClose />
-          </IconButton>
         </div>
       )}
-      <div className={interactable ? styles.interactable : ""}>{children}</div>
+      <div
+        className={`${styles.children} ${
+          interactable ? styles.interactable : ""
+        }`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

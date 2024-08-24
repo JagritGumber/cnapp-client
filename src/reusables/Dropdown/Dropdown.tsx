@@ -34,7 +34,10 @@ const Dropdown: React.FC<Readonly<DropdownProps>> = ({
               className={`${styles.dropdownItem} ${
                 id === selected ? styles.selected : ""
               }`}
-              onClick={() => setSelected(id)}
+              onClick={() => {
+                setSelected(id);
+                setIsOpen(!isOpen);
+              }}
             >
               {item}
             </li>

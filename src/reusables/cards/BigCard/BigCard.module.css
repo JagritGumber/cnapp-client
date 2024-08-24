@@ -1,5 +1,6 @@
 .bigCard {
-  aspect-ratio: 7/5;
+  aspect-ratio: 7/4;
+  transition: background-color 100ms ease-in, color 100ms ease-in;
 }
 
 .header {
@@ -16,6 +17,18 @@
   height: 100%;
 }
 
+.bigCard:has(.interactable) {
+  cursor: pointer;
+}
+
 .bigCard:has(.interactable:hover) {
-  background-color: var(--mixed-200);
+  background-color: var(--primary-1);
+  color: var(--surface-100);
+}
+
+.children {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }

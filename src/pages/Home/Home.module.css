@@ -1,0 +1,50 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 0;
+  height: calc(100vh - 4rem);
+  width: 100%;
+}
+
+.projectsGroup {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.projectCard {
+  padding: 1rem;
+  background-color: var(--surface-100);
+  flex-basis: 33%;
+  width: 30%;
+  border-radius: 1rem;
+  border: 1px solid var(--surface-300);
+  display: flex;
+  flex-direction: column;
+  min-height: 14rem;
+  cursor: pointer;
+  transition: background-color 100ms ease-in, color 100ms ease-in;
+}
+
+.projectCard:hover {
+  background-color: var(--primary-1);
+  color: var(--surface-100);
+}
+
+.projectCard span {
+  display: block;
+}
+
+.projectCard .head {
+  font-size: 1.5rem;
+}
+
+.projectCard .desc {
+  color: var(--text-200);
+}
+
+.projectCard .updatedAt {
+  margin-top: auto;
+  margin-left: auto;
+  color: var(--text-200);
+}

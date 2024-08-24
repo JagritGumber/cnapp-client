@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
-.dashboardLayout .children {
+.dashboardLayout .wrapper {
   flex-grow: 1;
+}
+
+.children {
+  display: flex;
 }
